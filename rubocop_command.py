@@ -236,28 +236,6 @@ class RubocopCheckOpenFilesOnlyWithLintCopsCommand(RubocopCheckOpenFilesCommand)
   def used_options(self):
     return ['-l']
 
-# --------- Rails Cops -------------
-
-# Runs a check on the current file (Rails)
-class RubocopCheckCurrentFileRailsCommand(RubocopCheckSingleFileCommand):
-  def used_options(self):
-    return ['-R']
-
-# Runs a check on the current project (Rails)
-class RubocopCheckProjectRailsCommand(RubocopCheckProjectCommand):
-  def used_options(self):
-    return ['-R']
-
-# Runs a check on the current project (Rails)
-class RubocopCheckFileFolderRailsCommand(RubocopCheckFileFolderCommand):
-  def used_options(self):
-    return ['-R']
-
-# Runs a check on all open files (Rails)
-class RubocopCheckOpenFilesRailsCommand(RubocopCheckOpenFilesCommand):
-  def used_options(self):
-    return ['-R']
-
 # Opens all offensive files in the current project
 class RubocopOpenAllOffensiveFilesCommand(RubocopCommand):
   def run(self, edit):
